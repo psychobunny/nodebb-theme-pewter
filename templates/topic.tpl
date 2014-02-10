@@ -18,9 +18,8 @@
 			<a href="{relative_path}/category/{category_slug}" itemprop="url"><span itemprop="title">{category_name}</span></a>
 		</li>
 		<li class="active" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
-			<span itemprop="title">{topic_name} <a target="_blank" href="../{topic_id}.rss"><i class="fa fa-rss-square"></i></a></span>
+			<span itemprop="title">{topic_name} </span>
 		</li>
-
 	</ol>
 
 	<ul id="post-container" class="posts" data-tid="{topic_id}">
@@ -149,7 +148,8 @@
 						<strong><span id="topic-post-count" class="human-readable-number" title="{postcount}">{postcount}</span></strong> |
 						<span>[[category:views]]</span>
 						<strong><span class="human-readable-number" title="{viewcount}">{viewcount}</span></strong> |
-						<span>[[category:browsing]]</span>
+						<span>[[category:browsing]]</span> | 
+						<span><a target="_blank" href="../{topic_id}.rss"><i class="fa fa-rss-square"></i></a></span>
 					</small>
 					<div class="thread_active_users active-users inline-block"></div>
 				</div>

@@ -3,20 +3,9 @@
 		<a href="{relative_path}/" itemprop="url"><span itemprop="title">[[global:home]]</span></a>
 	</li>
 	<li class="active" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
-		<span itemprop="title">{category_name}
-			<a target="_blank" href="../{category_id}.rss"><i class="fa fa-rss-square"></i></a>
-			<!-- IF !disableSocialButtons -->
-			<a href="#" id="facebook-share"><i class="fa fa-facebook-square"></i></a>
-			<a href="#" id="twitter-intent"><i class="fa fa-twitter-square"></i></a>
-			<a href="#" id="google-share"><i class="fa fa-google-plus-square"></i></a>
-			<!-- ENDIF !disableSocialButtons -->
-		</span>
+		<span itemprop="title">{category_name}</span>
 	</li>
 </ol>
-
-<div>
-	<button id="new_post" class="btn btn-primary {show_topic_button}">[[category:new_topic_button]]</button>
-</div>
 
 <hr/>
 
@@ -26,6 +15,24 @@
 
 <div class="category row">
 	<div class="col-xs-12">
+		<div class="post-bar {show_topic_button}" data-index="{posts.index}">
+			<div class="inline-block">
+				<small class="topic-stats">
+					<a target="_blank" href="../{category_id}.rss"><i class="fa fa-rss-square"></i></a>
+					<!-- IF !disableSocialButtons -->
+					<a href="#" id="facebook-share"><i class="fa fa-facebook-square"></i></a>
+					<a href="#" id="twitter-intent"><i class="fa fa-twitter-square"></i></a>
+					<a href="#" id="google-share"><i class="fa fa-google-plus-square"></i></a>
+					<!-- ENDIF !disableSocialButtons -->
+				</small>
+				<div class="thread_active_users active-users inline-block"></div>
+			</div>
+			<div class="topic-main-buttons pull-right inline-block">
+				<button id="new_post" class="btn btn-primary">[[category:new_topic_button]]</button>
+			</div>
+			<div style="clear:both;"></div>
+		</div>
+
 		<ul id="topics-container" itemscope itemtype="http://www.schema.org/ItemList" data-nextstart="{nextStart}">
 			<meta itemprop="itemListOrder" content="descending">
 			<!-- BEGIN topics -->
