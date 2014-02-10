@@ -41,16 +41,12 @@ $(document).ready(function () {
 
 
     $(window).on('action:connected', function() {
-	    if (app.username) {
-	    	$('.forum-header .welcome').html('<p>Welcome, <strong>' + app.username + '</strong>.');
-	    	$('.forum-header a').hide();
-	    }
-
 	    $.get(RELATIVE_PATH + '/api/recent', {}, function(posts) {
-			var recentReplies = $('.topic-list');
+
+			var topicList = $('.topic-list');
 
 			if(!posts || !posts.topics || !posts.topics.length) {
-				recentReplies.html('No topics have been posted yet.');
+				topicList.html('No topics have been posted yet.');
 				return;
 			}
 
@@ -84,9 +80,21 @@ $(document).ready(function () {
 
 			}
 
-			recentReplies.html(replies);
+			topicList.html(replies);
 
 		});
+
+  		if (app.username) {
+	    	$.get(RELATIVE_PATH + '/api/user/' + app.username, {}, function(userData) {
+	    		$('.forum-header .welcome').html('<p>Welcome, <strong>' + app.username + '</strong>.</p><p>You have <a href="/unread" class="unread">0</a> unread posts.</p>');
+	    		//'<p>Reputation: ' + userData.reputation + '<br />Post Count: ' + userData.postcount + '<br />Followers: ' + userData.followerCount
+	    		$('.forum-header .btn-primary').hide();
+	    		$('.forum-header .avatar img').attr('src', userData.picture);
+	    		$.get(RELATIVE_PATH + '/api/unread/', {}, function(unread) {
+	    			$('.forum-header .unread').html(unread.topics.length);
+	    		});
+	    	});
+	    }
 	});
 
 	$(document).bind('DOMNodeInserted', function(event) {
