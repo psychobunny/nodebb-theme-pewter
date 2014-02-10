@@ -100,7 +100,7 @@ $(document).ready(function () {
 					} 
 					replies += '<li>'
 							+ '<a href="' + RELATIVE_PATH + '/topic/' + posts[i].slug + '#' + posts[i].teaser_pid + '">'
-							+ '<span class="icon"><i class="fa fa-user"></i></span><span class="name">' + posts[i].title + '</span><span class="author">' + posts[i].username + '</span></a><span class="time">' + time + '</span></li>';
+							+ '<span class="icon"><i class="fa fa-user"></i></span><span class="name">' + posts[i].title + '</span><span class="author">' + posts[i].username + '</span><span class="time">' + time + '</span></a></li>';
 
 				}
 

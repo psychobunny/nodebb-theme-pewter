@@ -217,20 +217,6 @@
 		<div class="forum-header">
 			<div class="container">
 				<ul class="topic-list pull-left">
-					<li>
-						<span class="icon">
-							<i class="fa fa-user"></i>
-						</span>
-						<span class="name">
-							Here is a forum topic
-						</span>
-						<span class="author">
-							psychobunny
-						</span>
-						<span class="time">
-							1h
-						</span>
-					</li>
 				</ul>
 				<div class="pull-right profile">
 					<div class="avatar pull-left">
@@ -248,6 +234,5 @@
 				</div>
 			</div>
 		</div>
-
 
 		<div class="container" id="content">

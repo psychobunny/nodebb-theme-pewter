@@ -15,17 +15,29 @@ body {
 	background: #505461;
 	margin-bottom: 15px;
 
+	.container {
+		padding-left: 0;
+	}
+
 	.topic-list {
 		cursor: pointer;
-		width: 660px;
+		width: 668px;
 		list-style-type: none;
 		padding: 0;
 		margin: 0;
 		margin-top: 10px;
 		margin-bottom: 10px;
+
 		a {
 			background: #4C505C;
 			color: #EEEEEE;
+
+			&:hover {
+				background: #5D616E;
+				li {
+					background: #5D616E;
+				}
+			}
 		}
 		li {
 			background: #4C505C;
@@ -52,7 +64,7 @@ body {
 				}
 
 				&.name {
-					width: 440px;
+					width: 448px;
 					overflow: hidden;
 					text-overflow: ellipsis;
 					display: inline-block;
@@ -62,7 +74,7 @@ body {
 				}
 
 				&.author {
-					width: 125px;
+					width: 140px;
 				}
 
 			}
