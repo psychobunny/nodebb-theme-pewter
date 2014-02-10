@@ -83,10 +83,6 @@
 					</li>
 					<!-- ENDIF isAdmin -->
 
-					<li class="visible-xs">
-						<a id="mobile-search-button" href="{relative_path}/search"><i class="fa fa-search" title="[[global:header.search]]"></i></a>
-					</li>
-
 					<!-- BEGIN navigation -->
 					<li class="{navigation.class}">
 						<a href="{relative_path}{navigation.route}" title="{navigation.title}">
@@ -103,6 +99,15 @@
 				</ul>
 
 				<ul id="logged-in-menu" class="nav navbar-nav navbar-right hide">
+					<li>
+						<a href="{relative_path}/notifications"><i class="fa fa-exclamation-triangle" title="[[notifications:title]]"></i> [[notifications:title]]</a>
+					</li>
+					<li id="logout-link">
+						<a href="#">[[global:logout]]</a>
+					</li>
+					<li class="seperator"></li>
+				</ul>
+
 					<!--
 					<li>
 						<a href="#" id="reconnect" class="hide" title="Connection to {title} has been lost, attempting to reconnect..."><i class="fa fa-check"></i></a>
@@ -177,19 +182,8 @@
 				</ul>
 
 				<ul id="logged-conditional-menu" class="nav navbar-nav navbar-right">
-					<li class="hidden-xs">
-						<form id="search-form" class="navbar-form navbar-right" role="search" method="GET" action="">
-							<div class="hide" id="search-fields">
-								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Search" name="query" value="">
-								</div>
-								<button type="submit" class="btn btn-default hide">[[global:search]]</button>
-							</div>
-						</form>
-					</li>
-
-					<li class="hidden-xs">
-						<a href="#" id="search-button" class="hide"><i class="fa fa-search" title="[[global:header.search]]"></i> [[global:header.search]]</a>
+					<li>
+						<a id="mobile-search-button" href="{relative_path}/search"><i class="fa fa-search" title="[[global:header.search]]"></i> [[global:header.search]]</a>
 					</li>
 				</ul>
 
