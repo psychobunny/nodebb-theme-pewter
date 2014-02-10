@@ -28,23 +28,21 @@ body {
 		margin-top: 10px;
 		margin-bottom: 10px;
 
-		a {
-			background: #4C505C;
-			color: #EEEEEE;
-
-			&:hover {
-				background: #5D616E;
-				li {
-					background: #5D616E;
-				}
-			}
-		}
 		li {
 			background: #4C505C;
 			color: #EEEEEE;
 
+			a {
+				background: #4C505C;
+				color: #EEEEEE;
+			}
+
 			&:hover {
 				background: #5D616E;
+
+				a {
+					background: #5D616E;
+				}
 			}
 			
 			margin-bottom: 5px;
@@ -54,6 +52,12 @@ body {
 				display: inline-block;
 				border-right: 2px solid #505461;
 
+				overflow: hidden;
+				text-overflow: ellipsis;
+				display: inline-block;
+				white-space: nowrap;
+				height: 30px;
+				vertical-align: -27%;
 				&.icon, &.time {
 					width: 40px;
 					text-align: center;
@@ -65,12 +69,6 @@ body {
 
 				&.name {
 					width: 448px;
-					overflow: hidden;
-					text-overflow: ellipsis;
-					display: inline-block;
-					white-space: nowrap;
-					height: 25px;
-					vertical-align: -27%;
 				}
 
 				&.author {
