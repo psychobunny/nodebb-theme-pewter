@@ -72,8 +72,11 @@ $(document).ready(function () {
 				if (time < 3600) {
 					time = Math.floor(time / 60) + 'm';
 				} else if (time < 86400) {
-					time = Math.floor(time / 60 / 24) + 'h';
-				} 
+					time = Math.floor(time / 60 / 60) + 'h';
+				}  else if (time >= 86400) {
+					time = Math.floor(time / 60/ 60 / 24) + 'd';
+				}
+
 				replies += '<li>'
 						+ '<a href="' + RELATIVE_PATH + '/topic/' + posts[i].slug + '#' + posts[i].teaser_pid + '">'
 						+ '<span class="icon"><i class="fa fa-user"></i></span><span class="name">' + posts[i].title + '</span><span class="author">' + posts[i].username + '</span><span class="time">' + time + '</span></a></li>';
