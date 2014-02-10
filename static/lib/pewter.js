@@ -1,15 +1,13 @@
 $(document).ready(function () {
-    //stick in the fixed 100% height behind the navbar but don't wrap it
+    // modified from http://stackoverflow.com/questions/20863288/bootstrap-3-slide-in-menu-navbar-on-mobile
     $('#header-menu.navbar .container').append($('<div id="navbar-height-col"></div>'));
 
-    // Enter your ids or classes
-    var toggler = '.navbar-toggle';
-    var pagewrapper = '#page-content';
-    var navigationwrapper = '.navbar-header';
-    var menuwidth = '100%'; // the menu inside the slide menu itself
-    var slidewidth = '20%';
-    var menuneg = '-100%';
-    var slideneg = '-20%';
+    var toggler = '.navbar-toggle',
+		pagewrapper = '#page-content',
+		navigationwrapper = '.navbar-header',
+		slidewidth = '20%',
+		menuneg = '-100%',
+		slideneg = '-20%';
 
 
     $("#header-menu").on("click", toggler, function (e) {
@@ -31,10 +29,8 @@ $(document).ready(function () {
             left: selected ? '0px' : slidewidth
         });
 
-
         $(this).toggleClass('slide-active', !selected);
         $('#slidemenu').toggleClass('slide-active');
-
 
         $('#page-content, .navbar, body, .navbar-header').toggleClass('slide-active');
     });

@@ -1,0 +1,140 @@
+//http://stackoverflow.com/questions/20863288/bootstrap-3-slide-in-menu-navbar-on-mobile
+
+body.slide-active {
+    overflow-x: hidden
+}
+.no-margin-top {
+    margin-top: 0px!important
+}
+#page-content {
+    position: relative;
+    padding-top: 0px;
+    left: 0;
+    margin-top: -51px;
+}
+#page-content.slide-active {
+    padding-top: 0
+}
+
+#header-menu {
+	position: fixed;
+	margin-top: -100px;
+
+	.navbar-toggle {
+		top: 100px;
+		position: absolute;
+		padding: 0px;
+		margin: 0px;
+		left: 5px;
+
+		.icon-bar {
+			background: black;
+		}
+
+		&.slide-active {
+			margin-left: 20px;
+		}
+	}
+}
+#header-menu .navbar-toggle {
+    cursor: pointer;
+    position: relative;
+    line-height: 0;
+    float: left;
+    margin: 0;
+    width: 30px;
+    height: 40px;
+    padding: 10px 0 0 0;
+    border: 0;
+    background: transparent;
+}
+#header-menu .navbar-toggle > .icon-bar {
+    width: 100%;
+    display: block;
+    height: 3px;
+    margin: 5px 0 0 0;
+}
+#header-menu .navbar-toggle.slide-active .icon-bar {
+    background: #38C071;
+}
+.navbar-header {
+    position: relative
+}
+.navbar.navbar-fixed-top.slide-active {
+    position: relative
+}
+
+#header-menu .container {
+    margin: 0;
+    padding: 0!important;
+}
+#header-menu .navbar-header {
+    margin: 0 auto;
+    padding: 0 15px;
+}
+#header-menu .navbar.slide-active {
+    position: absolute;
+    width: 20%;
+    top: -1px;
+    z-index: 1000;
+}
+#header-menu #slidemenu {
+    background: #f7f7f7;
+    left: -100%;
+    width: 20%;
+    min-width: 0;
+    position: absolute;
+    padding-left: 0;
+    z-index: 2;
+    top: -8px;
+    margin: 0;
+    margin-top: 110px;
+
+    li.seperator {
+    	height: 2px;
+    	border-top: 1px solid #000;
+    	box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.1) inset, 0px 0px 0px rgba(255, 255, 255, 0.1)
+    }
+}
+#header-menu #slidemenu .navbar-nav {
+    min-width: 0;
+    width: 100%;
+    margin: 0;
+}
+#header-menu #slidemenu .navbar-nav .dropdown-menu li a {
+    min-width: 0;
+    width: 20%;
+    white-space: normal;
+}
+#header-menu {
+    border-top: 0
+}
+#header-menu.navbar-inverse #slidemenu {
+    background: #333
+}
+
+#header-menu #navbar-height-col {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 20%;
+    left: -20%;
+    background: #eee;
+}
+#header-menu.navbar-inverse #navbar-height-col {
+    background: #333;
+    z-index: 1;
+    border: 0;
+}
+#header-menu .navbar-form {
+    width: 100%;
+    margin: 8px 0;
+    text-align: center;
+    overflow: hidden;
+}
+#header-menu .navbar-form .form-control {
+    text-align: center
+}
+#header-menu .navbar-form .btn {
+    width: 100%
+}
