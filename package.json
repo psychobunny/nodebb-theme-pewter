@@ -1,0 +1,27 @@
+{
+  "name": "nodebb-theme-pewter",
+  "version": "0.0.1",
+  "description": "Lavender Theme for NodeBB",
+  "main": "theme.less",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/psychobunny/nodebb-theme-pewter"
+  },
+  "keywords": [
+    "nodebb",
+    "pewter",
+    "theme",
+    "themes"
+  ],
+  "author": {
+    "name": "psychobunny",
+    "email": "psycho.bunny@hotmail.com"
+  },
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/psychobunny/nodebb-theme-pewter/issues"
+  },
+  "peerDependencies": {
+    "nodebb-theme-vanilla": "~0.0.13"
+  }
+}

@@ -1,0 +1,9 @@
+{
+    "id": "nodebb-theme-pewter",
+    "name": "Pewter Theme for NodeBB",
+    "description": "NodeBB's take on a more \"traditional\" yet responsive forum theme.",
+    "url": "https://www.github.com/psychobunny/nodebb-theme-pewter",
+    "screenshot": null,
+    "templates": "templates",
+    "staticDir": "static"
+}
