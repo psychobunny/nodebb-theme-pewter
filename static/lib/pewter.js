@@ -40,6 +40,55 @@ $(document).ready(function () {
     });
 
 
+    $(window).on('action:connected', function() {
+	    if (app.username) {
+	    	$('.forum-header .welcome').html('<p>Welcome, <strong>' + app.username + '</strong>.');
+	    	$('.forum-header a').hide();
+	    }
+
+	    $.get(RELATIVE_PATH + '/api/recent', {}, function(posts) {
+			var recentReplies = $('.topic-list');
+
+			if(!posts || !posts.topics || !posts.topics.length) {
+				recentReplies.html('No topics have been posted yet.');
+				return;
+			}
+
+			var topic = posts.topics[Math.floor(Math.random() * posts.topics.length)];
+
+			var html = '<strong>'+ topic.username +'</strong> '
+				+ '<a href="' + RELATIVE_PATH + '/topic/' + topic.slug + '#' + topic.teaser_pid + '">'
+				+ topic.title + '</a> <span class="timeago" title="' + utils.toISOString(topic.lastposttime) + '"></span>';
+
+			$('.random-topic .panel-body').html(html);
+
+			$('.random-topic span.timeago').timeago();
+
+			posts = posts.topics.slice(0, 5);
+
+			var replies = '';
+
+			for (var i = 0, numPosts = posts.length; i < numPosts; ++i) {
+				
+
+				var time = Math.floor((new Date().getTime() - posts[i].lastposttime) / 1000);
+
+				if (time < 3600) {
+					time = Math.floor(time / 60) + 'm';
+				} else if (time < 86400) {
+					time = Math.floor(time / 60 / 24) + 'h';
+				} 
+				replies += '<li>'
+						+ '<a href="' + RELATIVE_PATH + '/topic/' + posts[i].slug + '#' + posts[i].teaser_pid + '">'
+						+ '<span class="icon"><i class="fa fa-user"></i></span><span class="name">' + posts[i].title + '</span><span class="author">' + posts[i].username + '</span><span class="time">' + time + '</span></a></li>';
+
+			}
+
+			recentReplies.html(replies);
+
+		});
+	});
+
 	$(document).bind('DOMNodeInserted', function(event) {
 		// Unsure about performance of this, probably pretty bad. Need to bind to ajaxify.onchange or similar instead.
 		if (event.target.className == 'row home') {
@@ -66,47 +115,7 @@ $(document).ready(function () {
 				recentReplies.html(replies);
 			});
 
-			$.get(RELATIVE_PATH + '/api/recent', {}, function(posts) {
-				var recentReplies = $('.topic-list');
-
-				if(!posts || !posts.topics || !posts.topics.length) {
-					recentReplies.html('No topics have been posted yet.');
-					return;
-				}
-
-				var topic = posts.topics[Math.floor(Math.random() * posts.topics.length)];
-
-				var html = '<strong>'+ topic.username +'</strong> '
-					+ '<a href="' + RELATIVE_PATH + '/topic/' + topic.slug + '#' + topic.teaser_pid + '">'
-					+ topic.title + '</a> <span class="timeago" title="' + utils.toISOString(topic.lastposttime) + '"></span>';
-
-				$('.random-topic .panel-body').html(html);
-
-				$('.random-topic span.timeago').timeago();
-
-				posts = posts.topics.slice(0, 5);
-
-				var replies = '';
-
-				for (var i = 0, numPosts = posts.length; i < numPosts; ++i) {
-					
-
-					var time = Math.floor((new Date().getTime() - posts[i].lastposttime) / 1000);
-
-					if (time < 3600) {
-						time = Math.floor(time / 60) + 'm';
-					} else if (time < 86400) {
-						time = Math.floor(time / 60 / 24) + 'h';
-					} 
-					replies += '<li>'
-							+ '<a href="' + RELATIVE_PATH + '/topic/' + posts[i].slug + '#' + posts[i].teaser_pid + '">'
-							+ '<span class="icon"><i class="fa fa-user"></i></span><span class="name">' + posts[i].title + '</span><span class="author">' + posts[i].username + '</span><span class="time">' + time + '</span></a></li>';
-
-				}
-
-				recentReplies.html(replies);
-
-			});
+			
 		}
 	});
 
