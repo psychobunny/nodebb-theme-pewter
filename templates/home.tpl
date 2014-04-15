@@ -18,10 +18,6 @@
 		<!-- END categories -->
 	</div>
 	<div class="sidebar">
-		<div class="motd">
-			{motd}
-		</div>
-
 		<div class="panel panel-default random-topic">
 			<div class="panel panel-header">Random Topic</div>
 			<div class="panel-body"></div>
