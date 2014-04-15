@@ -18,7 +18,7 @@
 		<div class="post-bar {show_topic_button}" data-index="{posts.index}">
 			<div class="inline-block">
 				<small class="topic-stats">
-					<a target="_blank" href="../{category_id}.rss"><i class="fa fa-rss-square"></i></a>
+					<a target="_blank" href="../{cid}.rss"><i class="fa fa-rss-square"></i></a>
 					<!-- IF !disableSocialButtons -->
 					<a href="#" id="facebook-share"><i class="fa fa-facebook-square"></i></a>
 					<a href="#" id="twitter-intent"><i class="fa fa-twitter-square"></i></a>
@@ -92,7 +92,7 @@
 	</div>
 </div>
 
-<input type="hidden" template-variable="category_id" value="{category_id}" />
+<input type="hidden" template-variable="category_id" value="{cid}" />
 <input type="hidden" template-variable="category_name" value="{name}" />
 <input type="hidden" template-variable="currentPage" value="{currentPage}" />
 <input type="hidden" template-variable="pageCount" value="{pageCount}" />
