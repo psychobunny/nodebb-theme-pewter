@@ -24,7 +24,7 @@
 
 	<ul id="post-container" class="posts" data-tid="{tid}">
 		<!-- BEGIN posts -->
-			<li class="post-row infiniteloaded" data-pid="{posts.pid}" data-uid="{posts.uid}" data-username="{posts.username}" data-userslug="{posts.userslug}" data-index="{posts.index}" data-deleted="{posts.deleted}" itemscope itemtype="http://schema.org/Comment">
+			<li class="post-row infiniteloaded" data-pid="{posts.pid}" data-uid="{posts.uid}" data-username="{posts.user.username}" data-userslug="{posts.userslug}" data-index="{posts.index}" data-deleted="{posts.deleted}" itemscope itemtype="http://schema.org/Comment">
 
 				<a id="post_anchor_{posts.pid}" name="{posts.pid}"></a>
 
@@ -37,7 +37,7 @@
 							<div class="col-md-12">
 								<div class="topic-profile-pic">
 									<a href="{relative_path}/user/{posts.userslug}">
-										<img src="{posts.picture}" alt="{posts.username}" class="profile-image user-img" title="{posts.username}">
+										<img src="{posts.user.picture}" alt="{posts.user.username}" class="profile-image user-img" title="{posts.user.username}">
 									</a>
 								</div>
 								<div class="topic-text">
@@ -124,7 +124,7 @@
 								<span>
 									<i class="fa fa-circle status-offline"></i>
 									<span class="username-field">
-										<a href="{relative_path}/user/{posts.userslug}" itemprop="author">{posts.username}</a>
+										<a href="{relative_path}/user/{posts.userslug}" itemprop="author">{posts.user.username}</a>
 										[[category:posted]] <span class="relativeTimeAgo timeago" title="{posts.relativeTime}"></span>
 									</span>
 								</span>
