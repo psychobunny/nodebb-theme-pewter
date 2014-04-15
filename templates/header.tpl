@@ -26,8 +26,6 @@
 			}
 		});
 	</script>
-
-	<script src="{relative_path}/css/assets/lib/pewter.js"></script>
 	<!-- IF useCustomCSS -->
 	<style type="text/css">{customCSS}</style>
 	<!-- ENDIF useCustomCSS -->

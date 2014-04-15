@@ -5,5 +5,11 @@
 		{
 			"hook": "filter:widgets.getAreas", "method": "defineWidgetAreas", "callbacked": true
 		}
+	],
+	"staticDirs": {
+		"vendor": "static/vendor"
+	},
+	"scripts": [
+		"static/lib/pewter.js"
 	]
 }
