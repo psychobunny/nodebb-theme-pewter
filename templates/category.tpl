@@ -9,10 +9,6 @@
 
 <hr/>
 
-<div class="alert alert-warning hide {no_topics_message}" id="category-no-topics">
-	[[category:no_topics]]
-</div>
-
 <div class="category row">
 	<div class="col-xs-12">
 		<div class="post-bar {show_topic_button}" data-index="{posts.index}">
@@ -91,6 +87,12 @@
 		<!-- ENDIF usePagination -->
 	</div>
 </div>
+
+<!-- IF !topics.length -->
+<div class="alert alert-warning" id="category-no-topics">
+	[[category:no_topics]]
+</div>
+<!-- ENDIF !topics.length -->
 
 <input type="hidden" template-variable="category_id" value="{cid}" />
 <input type="hidden" template-variable="category_name" value="{name}" />
