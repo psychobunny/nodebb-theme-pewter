@@ -3,7 +3,7 @@
 		<a href="{relative_path}/" itemprop="url"><span itemprop="title">[[global:home]]</span></a>
 	</li>
 	<li class="active" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
-		<span itemprop="title">{category_name}</span>
+		<span itemprop="title">{name}</span>
 	</li>
 </ol>
 
@@ -93,6 +93,6 @@
 </div>
 
 <input type="hidden" template-variable="category_id" value="{category_id}" />
-<input type="hidden" template-variable="category_name" value="{category_name}" />
+<input type="hidden" template-variable="category_name" value="{name}" />
 <input type="hidden" template-variable="currentPage" value="{currentPage}" />
 <input type="hidden" template-variable="pageCount" value="{pageCount}" />
