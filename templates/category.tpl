@@ -44,13 +44,13 @@
 							<div class="col-md-8 col-sm-9">
 								<div class="category-profile-pic">
 									<a href="../../user/{topics.userslug}">
-										<img src="{topics.picture}" alt="{topics.teaser_username}" class="profile-image user-img" title="{topics.username}">
+										<img src="{topics.user.picture}" alt="{topics.teaser.username}" class="profile-image user-img" title="{topics.user.username}">
 									</a>
 								</div>
 								<div class="category-text">
 									<p><strong><i class="fa {topics.pin-icon}"></i> <i class="fa {topics.lock-icon}"></i></strong>
 										<a href="../../topic/{topics.slug}" itemprop="url">{topics.title}</a><br />
-										<small>[[category:posted]] <span class="timeago" title="{topics.relativeTime}"></span> by {topics.username}</small>
+										<small>[[category:posted]] <span class="timeago" title="{topics.relativeTime}"></span> by {topics.user.username}</small>
 									</p>
 								</div>
 							</div>
@@ -67,11 +67,11 @@
 								<p class="no-replies">[[category:no_replies]]</p>
 								<!-- ELSE -->
 								<a href="../../user/{topics.teaser_userslug}">
-									<img class="profile-image small user-img" src="{topics.teaser_userpicture}" title="{topics.teaser_username}"/>
+									<img class="profile-image small user-img" src="{topics.teaser.picture}" title="{topics.teaser.username}"/>
 								</a>
-								<a href="../../topic/{topics.slug}#{topics.teaser_pid}">
+								<a href="../../topic/{topics.slug}#{topics.teaser.pid}">
 									[[category:replied]]
-									<span class="timeago" title="{topics.teaser_timestamp}"></span>
+									<span class="timeago" title="{topics.teaser.timestamp}"></span>
 								</a>
 								<!-- ENDIF topics.unreplied -->
 							</div>
