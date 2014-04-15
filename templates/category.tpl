@@ -48,7 +48,7 @@
 									</a>
 								</div>
 								<div class="category-text">
-									<p><strong><i class="fa {topics.pin-icon}"></i> <i class="fa {topics.lock-icon}"></i></strong>
+									<p><strong><!-- IF topics.pinned --><i class="fa fa-thumb-tack"></i><!-- ENDIF topics.pinned --> <!-- IF topics.locked --><i class="fa fa-lock"></i><!-- ENDIF topics.locked --></strong>
 										<a href="../../topic/{topics.slug}" itemprop="url">{topics.title}</a><br />
 										<small>[[category:posted]] <span class="timeago" title="{topics.relativeTime}"></span> by {topics.user.username}</small>
 									</p>
