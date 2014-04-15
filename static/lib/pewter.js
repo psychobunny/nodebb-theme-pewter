@@ -96,11 +96,11 @@ $(document).ready(function () {
 	    }
 	});
 
-	$(document).bind('DOMNodeInserted', function(event) {
-		// Unsure about performance of this, probably pretty bad. Need to bind to ajaxify.onchange or similar instead.
-		if (event.target.className == 'row home') {
 
+	$(window).on('action:ajaxify.end', function(ev, data) {
+		var url = data.url;
 
+		if (url === '') {
 			$.get(RELATIVE_PATH + '/api/popular/views', {}, function(posts) {
 				var recentReplies = $('.popular-topics ul');
 
@@ -121,8 +121,6 @@ $(document).ready(function () {
 
 				recentReplies.html(replies);
 			});
-
-			
 		}
 	});
 
