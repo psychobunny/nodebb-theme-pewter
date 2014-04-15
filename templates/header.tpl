@@ -13,9 +13,7 @@
 		var RELATIVE_PATH = "{relative_path}";
 	</script>
 	<script src="{relative_path}/socket.io/socket.io.js"></script>
-	<!-- BEGIN clientScripts -->
-	<script src="{relative_path}/{clientScripts.script}?{cache-buster}"></script>
-	<!-- END clientScripts -->
+	<script src="{relative_path}/nodebb.min.js?{cache-buster}"></script>
 	<script>
 		require.config({
 			baseUrl: "{relative_path}/src/modules",
