@@ -3,7 +3,13 @@
 	"library": "./lib/theme.js",
 	"hooks": [
 		{
+			"hook": "action:app.load", "method": "init"
+		},
+		{
 			"hook": "filter:widgets.getAreas", "method": "defineWidgetAreas", "callbacked": true
+		},
+		{
+			"hook": "filter:widget.render:pewterPopularTopics", "method": "renderPopularTopics"
 		}
 	],
 	"staticDirs": {

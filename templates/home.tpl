@@ -18,13 +18,8 @@
 		<!-- END categories -->
 	</div>
 	<div class="sidebar">
-		<div class="panel panel-default random-topic">
-			<div class="panel panel-header">Random Topic</div>
-			<div class="panel-body"></div>
-		</div>
-
 		<div class="panel panel-default">
-			<div class="panel panel-header">Popular Topics</div>
+			<div class="panel-heading">Popular Topics</div>
 			<div class="panel-body popular-topics">
 				<ul>
 					<li>
@@ -34,5 +29,7 @@
 				</ul>
 			</div>
 		</div>
+
 	</div>
+	<div class="sidebar" widget-area="sidebar"></div>
 </div>

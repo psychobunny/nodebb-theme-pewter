@@ -121,24 +121,27 @@ body {
 	}
 }
 
-.panel.panel-default {
+.panel {
 	border-radius: 5px;
 	border: 0;
 
-	.panel-header {
+	.panel-heading {
 		border-radius: 3px 3px 0 0;
 		margin: 0;
 		padding: 10px;
 		padding-left: 15px;
 		border: 0;
-		color: #CCCCCC;
 		font-size: 16px;
-		background: #333;
 	}
 
 	.panel-body {
 		border-radius: 0 0 3px 3px;
 	}
+}
+
+.panel.panel-default .panel-heading {
+	background: #333;
+	color: #CCCCCC;
 }
 
 .btn.btn-primary {
@@ -237,23 +240,6 @@ body {
 
 			h1  {
 				margin-top: 0;
-			}
-		}
-
-		.random-topic {
-			.panel-header {
-				max-width: 100%;
-				overflow: hidden;
-				text-overflow: ellipsis;
-				display: block;
-				white-space: nowrap;
-			}
-
-			.panel-body {
-				.timeago {
-					font-size: 12px;
-					color: #666;
-				}
 			}
 		}
 
@@ -591,5 +577,17 @@ body {
 		display: inline-block;
 		white-space: nowrap;
 		max-width: 75%;
+	}
+}
+
+#recent_posts {
+	li {
+		> div {
+			max-height: 190px;
+			overflow: hidden;
+			> p {
+				margin-bottom: 0px;
+			}
+		}
 	}
 }
