@@ -45,6 +45,11 @@
 									</a>
 								</div>
 								<div class="topic-text">
+									<!-- IF @first -->
+									<h3 class="topic-title">
+										<p id="topic_title_{posts.pid}" class="topic-title" itemprop="name">{title}</p>
+									</h3>
+									<!-- ENDIF @first -->
 									<div id="content_{posts.pid}" class="post-content" itemprop="text">{posts.content}</div>
 									<!-- IF posts.user.signature -->
 									<div class="post-signature">{posts.user.signature}</div>
@@ -61,10 +66,20 @@
 										<i class="fa fa-heart"></i>
 									</a>
 									<ul class="dropdown-menu" role="menu" aria-labelledby="postMenu_{posts.pid}">
+										<!-- IF @first -->
+										<li role="presentation">
+											<a role="menuitem" tabindex="-1" class="follow" title="Be notified of new replies in this topic">Watch <i class="fa fa-eye"></i></a>
+										</li>
+										<!-- ENDIF @first -->
 										<li role="presentation">
 											<a role="menuitem" tabindex="-1" data-favourited="{posts.favourited}" class="favourite">
 												<span class="favourite-text">[[topic:favourite]]</span>
 												<span class="favouriteCount" data-favourites="{posts.reputation}">{posts.reputation}</span>&nbsp;
+												<!-- IF posts.favourited -->
+												<i class="fa fa-heart"></i>
+												<!-- ELSE -->
+												<i class="fa fa-heart-o"></i>
+												<!-- ENDIF posts.favourited -->
 											</a>
 										</li>
 										<!-- IF !config.disableSocialButtons -->
@@ -114,7 +129,7 @@
 								<span>
 									<i class="fa fa-circle status-offline"></i>
 									<span class="username-field">
-										<a href="{relative_path}/user/{posts.userslug}" itemprop="author">{posts.user.username}</a>
+										<a href="{relative_path}/user/{posts.user.userslug}" itemprop="author">{posts.user.username}</a>
 										[[category:posted]] <span class="relativeTimeAgo timeago" title="{posts.relativeTime}"></span>
 									</span>
 								</span>
@@ -130,6 +145,38 @@
 				</div>
 			</li>
 
+			<!-- IF @first -->
+			<li class="post-bar" data-index="{posts.index}">
+				<div class="inline-block">
+					<small class="topic-stats">
+						<span>[[category:posts]]</span>
+						<strong><span id="topic-post-count" class="human-readable-number" title="{postcount}">{postcount}</span></strong> |
+						<span>[[category:views]]</span>
+						<strong><span class="human-readable-number" title="{viewcount}">{viewcount}</span></strong> |
+						<span>[[category:browsing]]</span> | 
+						<span><a target="_blank" href="../{tid}.rss"><i class="fa fa-rss-square"></i></a></span>
+					</small>
+					<div class="thread_active_users active-users inline-block"></div>
+				</div>
+				<div class="topic-main-buttons pull-right inline-block">
+					<button class="btn btn-primary post_reply" type="button">[[topic:reply]]</button>
+					<div class="btn-group thread-tools hide">
+						<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">[[topic:thread_tools.title]] <span class="caret"></span></button>
+						<ul class="dropdown-menu pull-right">
+							<li><a href="#" class="markAsUnreadForAll"><i class="fa fa-inbox"></i> [[topic:thread_tools.markAsUnreadForAll]]</a></li>
+							<li><a href="#" class="pin_thread"><i class="fa fa-thumb-tack"></i> [[topic:thread_tools.pin]]</a></li>
+							<li><a href="#" class="lock_thread"><i class="fa fa-lock"></i> [[topic:thread_tools.lock]]</a></li>
+							<li class="divider"></li>
+							<li><a href="#" class="move_thread"><i class="fa fa-arrows"></i> [[topic:thread_tools.move]]</a></li>
+							<li><a href="#" class="fork_thread"><i class="fa fa-code-fork"></i> [[topic:thread_tools.fork]]</a></li>
+							<li class="divider"></li>
+							<li><a href="#" class="delete_thread"><span class="text-error"><i class="fa fa-trash-o"></i> [[topic:thread_tools.delete]]</span></a></li>
+						</ul>
+					</div>
+				</div>
+				<div style="clear:both;"></div>
+			</li>
+			<!-- ENDIF @first -->
 		<!-- END posts -->
 	</ul>
 
