@@ -3,10 +3,17 @@
 
 @import url(//fonts.googleapis.com/css?family=Roboto:400,300,500,700);
 
+html {
+	overflow-x: hidden;
+}
+
 body {
 	padding-top: 51px;
 	background: #E9ECF0;
-	overflow-x: hidden;
+}
+
+html, body {
+	height: 100%;
 }
 
 #content, .forum-header .container {
@@ -164,6 +171,7 @@ body {
 		width: 680px;
 
 		.category-item {
+			background-size: cover !important;
 			position: relative;
 			width: 215px;
 			height: 215px;
