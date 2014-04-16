@@ -158,3 +158,5 @@
 
 
 </div>
+
+<!-- IMPORT partials/noscript/paginator.tpl -->
