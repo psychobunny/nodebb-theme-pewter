@@ -135,7 +135,7 @@
 								</span>
 
 								<!-- IF posts.editor.username -->
-								<span>, [[category:last_edited_by]] <strong><a href="{relative_path}/user/{posts.editor.userslug}">{posts.editorname}</a></strong></span>
+								<span>, [[category:last_edited_by]] <strong><a href="{relative_path}/user/{posts.editor.userslug}">{posts.editor.username}</a></strong></span>
 								<span class="timeago" title="{posts.relativeEditTime}"></span>
 								<!-- ENDIF posts.editor.username -->
 								</small>
