@@ -131,14 +131,13 @@
 									<span class="username-field">
 										<a href="{relative_path}/user/{posts.user.userslug}" itemprop="author">{posts.user.username}</a>
 										[[category:posted]] <span class="relativeTimeAgo timeago" title="{posts.relativeTime}"></span>
+										<!-- IF posts.editor.username -->
+										<span>&bull; [[category:last_edited_by]] <strong><a href="{relative_path}/user/{posts.editor.userslug}">{posts.editor.username}</a></strong></span>
+										<span class="timeago" title="{posts.relativeEditTime}"></span>
+										<!-- ENDIF posts.editor.username -->
+										</small>
 									</span>
 								</span>
-
-								<!-- IF posts.editor.username -->
-								<span>, [[category:last_edited_by]] <strong><a href="{relative_path}/user/{posts.editor.userslug}">{posts.editor.username}</a></strong></span>
-								<span class="timeago" title="{posts.relativeEditTime}"></span>
-								<!-- ENDIF posts.editor.username -->
-								</small>
 							</div>
 						</div>
 					</div>
