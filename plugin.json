@@ -10,6 +10,9 @@
 		},
 		{
 			"hook": "filter:widget.render:pewterPopularTopics", "method": "renderPopularTopics"
+		},
+		{
+			"hook": "filter:widgets.getWidgets", "method": "defineWidgets"
 		}
 	],
 	"staticDirs": {

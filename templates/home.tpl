@@ -17,19 +17,5 @@
 			</a>
 		<!-- END categories -->
 	</div>
-	<div class="sidebar">
-		<div class="panel panel-default">
-			<div class="panel-heading">Popular Topics</div>
-			<div class="panel-body popular-topics">
-				<ul>
-					<li>
-						<span class="post-title"></span>
-						<span class="post-count"></span>
-					</li>
-				</ul>
-			</div>
-		</div>
-
-	</div>
 	<div class="sidebar" widget-area="sidebar"></div>
 </div>

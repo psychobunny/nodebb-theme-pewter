@@ -243,46 +243,43 @@ body {
 			}
 		}
 
+
 		.popular-topics {
 			padding: 0;
-			margin: 0;
-			ul {
-				padding: 0;
-				margin: 0;
-				list-style-type: none;
+			margin: -15px;
+			list-style-type: none;
 
-				li {
-					cursor: pointer;
-					border-bottom: 1px solid #EEEEEE;
-					padding: 10px;
-					padding-left: 12px;
-					font-size: 13px;
-					position: relative;
+			li {
+				cursor: pointer;
+				border-bottom: 1px solid #EEEEEE;
+				padding: 10px;
+				padding-left: 12px;
+				font-size: 13px;
+				position: relative;
 
-					&:last-child {
-						border-bottom: 0;
-					}
+				&:last-child {
+					border-bottom: 0;
+				}
 
-					&:hover {
-						.post-count {
-							opacity: 0.7;
-						}
-					}
-					.post-title {
-						max-width: 100%;
-						overflow: hidden;
-						text-overflow: ellipsis;
-						display: block;
-						white-space: nowrap;
-					}
-
+				&:hover {
 					.post-count {
-						font-size: 40px;
-						position: absolute;
-						right: 0px;
-						top: -11px;
-						opacity: 0.05;
+						opacity: 0.7;
 					}
+				}
+				.post-title {
+					max-width: 100%;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					display: block;
+					white-space: nowrap;
+				}
+
+				.post-count {
+					font-size: 40px;
+					position: absolute;
+					right: 0px;
+					top: -11px;
+					opacity: 0.05;
 				}
 			}
 		}
