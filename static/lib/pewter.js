@@ -73,7 +73,7 @@ $(document).ready(function () {
 
 		});
 
-		if (app.username) {
+		if (app.uid !== 0) {
 			$.get(RELATIVE_PATH + '/api/user/' + app.username, {}, function(userData) {
 				$('.forum-header .welcome').html('<p>Welcome, <strong>' + app.username + '</strong>.</p><p>You have <a href="/unread" class="unread">0</a> unread posts.</p>');
 				//'<p>Reputation: ' + userData.reputation + '<br />Post Count: ' + userData.postcount + '<br />Followers: ' + userData.followerCount
