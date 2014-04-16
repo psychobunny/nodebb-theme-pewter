@@ -4,7 +4,6 @@
 @import url(//fonts.googleapis.com/css?family=Roboto:400,300,500,700);
 
 html {
-	overflow-x: hidden;
 }
 
 body {
@@ -14,10 +13,13 @@ body {
 
 html, body {
 	height: 100%;
+	overflow-x: hidden;
+	overflow-y: visible;
 }
 
 #content, .forum-header .container {
 	max-width: 960px;
+	overflow-x: hidden;
 }
 
 .forum-header {
@@ -613,9 +615,16 @@ html, body {
 		}
 	}
 
+	#content {
+		margin-top: -15px;
+	}
+	.breadcrumb {
+		margin-top: 15px;
+	}
+
 	.home {
+		margin-top: -15px;
 		.category-list {
-			margin-top: -15px;
 			width: 100%;
 			.category-item {
 				width: 100%;

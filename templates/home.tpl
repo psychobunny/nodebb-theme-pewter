@@ -1,4 +1,3 @@
-
 <div class="row home">
 	<div class="category-list" itemscope itemtype="http://www.schema.org/ItemList">
 		<!-- BEGIN categories -->
