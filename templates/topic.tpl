@@ -133,12 +133,14 @@
 		<!-- END posts -->
 	</ul>
 
-	<div class="post-bar col-xs-12 pull-right hide bottom-post-bar">
+	<div class="well col-xs-12 pull-right post-bar bottom-post-bar hide">
 		<div class="topic-main-buttons pull-right inline-block">
 			<div class="loading-indicator" done="0" style="display:none;">
 				<span class="hidden-xs-inline">[[topic:loading_more_posts]]</span> <i class="fa fa-refresh fa-spin"></i>
 			</div>
+			<!-- IF privileges.write -->
 			<button class="btn btn-primary post_reply" type="button">[[topic:reply]]</button>
+			<!-- ENDIF privileges.write -->
 			<div class="btn-group thread-tools hide dropup">
 				<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">[[topic:thread_tools.title]] <span class="caret"></span></button>
 				<ul class="dropdown-menu pull-right">
