@@ -66,7 +66,7 @@
 												<span class="favouriteCount" data-favourites="{posts.reputation}">{posts.reputation}</span>&nbsp;
 											</a>
 										</li>
-										<!-- IF !disableSocialButtons -->
+										<!-- IF !config.disableSocialButtons -->
 										<li role="presentation" class="divider"></li>
 										<li role="presentation" class="dropdown-header">Share this Post</li>
 										<li role="presentation">
@@ -78,7 +78,7 @@
 										<li role="presentation">
 											<a role="menuitem" class="google-share" tabindex="-1" href="#"><span class="menu-icon"><i class="fa fa-google-plus"></i></span> Google+</a>
 										</li>
-										<!-- ENDIF !disableSocialButtons -->
+										<!-- ENDIF !config.disableSocialButtons -->
 									</ul>
 								</div>
 								&bull;
