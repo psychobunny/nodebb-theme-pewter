@@ -38,6 +38,9 @@
 								<div class="topic-profile-pic">
 									<a href="{relative_path}/user/{posts.userslug}">
 										<img src="{posts.user.picture}" alt="{posts.user.username}" class="profile-image user-img" title="{posts.user.username}">
+										<!-- IF posts.user.banned -->
+										<span class="label label-danger">[[topic:banned]]</span>
+										<!-- ENDIF posts.user.banned -->
 									</a>
 								</div>
 								<div class="topic-text">
