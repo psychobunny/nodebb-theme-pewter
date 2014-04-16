@@ -3,9 +3,9 @@
 	<div class="category-list" itemscope itemtype="http://www.schema.org/ItemList">
 		<!-- BEGIN categories -->
 			<!-- IF categories.link -->
-			<a class="category-item" href="{categories.link}" itemprop="url" target="_blank" style="background: {categories.background}">
+			<a class="category-item" href="{categories.link}" itemprop="url" target="_blank" style="background: url({categories.image}); background-color: {categories.bgColor};">
 			<!-- ELSE -->
-			<a class="category-item" href="category/{categories.slug}" itemprop="url" style="background: {categories.background}">
+			<a class="category-item" href="category/{categories.slug}" itemprop="url" style="background: url({categories.image}); background-color: {categories.bgColor};">
 			<!-- ENDIF categories.link-->
 				<div class="category-footer">
 					<span><i class="fa {categories.icon}"></i> {categories.name}</span>
