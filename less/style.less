@@ -589,3 +589,40 @@ body {
 		}
 	}
 }
+
+
+@media (max-width: @screen-md-max) {
+	.forum-header {
+		background: #40434E;
+
+		.topic-list {
+			display: none;
+		}
+
+		.profile {
+			float: left;
+			width: 100%;
+		}
+	}
+
+	.home {
+		.category-list {
+			width: 100%;
+			.category-item {
+				width: 100%;
+				.category-footer {
+					height: 48px;
+					span {
+						font-size: 20px;
+						line-height: 44px;
+						padding-left: 10px;
+					}
+				}
+			}
+		}
+
+		.sidebar {
+			display: none;
+		}
+	}
+}

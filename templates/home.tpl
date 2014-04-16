@@ -8,7 +8,7 @@
 			<a class="category-item" href="category/{categories.slug}" itemprop="url" style="background: {categories.background}">
 			<!-- ENDIF categories.link-->
 				<div class="category-footer">
-					<i class="fa {categories.icon}"></i> {categories.name}
+					<span><i class="fa {categories.icon}"></i> {categories.name}</span>
 					<div class="topic-count">
 						{categories.topic_count}
 						<div class="arrow"></div>
