@@ -94,6 +94,8 @@
 </div>
 <!-- ENDIF !topics.length -->
 
+<!-- IMPORT partials/noscript/paginator.tpl -->
+
 <input type="hidden" template-variable="category_id" value="{cid}" />
 <input type="hidden" template-variable="category_name" value="{name}" />
 <input type="hidden" template-variable="currentPage" value="{currentPage}" />
