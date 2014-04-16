@@ -89,10 +89,11 @@
 								<a href="#" class="downvote <!-- IF posts.downvoted --> downvoted btn-primary <!-- ENDIF posts.downvoted -->">
 									<i class="fa fa-minus"></i>
 								</a>
-								
-								<!-- BEGIN custom_profile_info -->
-								&bull; {posts.custom_profile_info.content}
-								<!-- END custom_profile_info -->
+								<!-- IF custom_profile_info -->
+									<!-- BEGIN custom_profile_info -->
+									&bull; {posts.custom_profile_info.content}
+									<!-- END custom_profile_info -->
+								<!-- ENDIF custom_profile_info -->
 
 								<span class="post-tools">
 									<button class="btn btn-sm btn-link chat" type="button" title="[[topic:chat]]"><i class="fa fa-comment"></i><span class="hidden-xs-inline"> [[topic:chat]]</span></button>
