@@ -40,7 +40,7 @@ $(document).ready(function () {
 
 
     $(window).on('action:connected', function() {
-		$.get(RELATIVE_PATH + '/api/recent', {}, function(posts) {
+		$.get(RELATIVE_PATH + '/api/recent/month', {}, function(posts) {
 
 			var topicList = $('.topic-list');
 
