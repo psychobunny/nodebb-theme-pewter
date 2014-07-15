@@ -15,9 +15,6 @@
 			"hook": "filter:widgets.getWidgets", "method": "defineWidgets"
 		}
 	],
-	"staticDirs": {
-		"vendor": "static/vendor"
-	},
 	"scripts": [
 		"static/lib/pewter.js"
 	]
