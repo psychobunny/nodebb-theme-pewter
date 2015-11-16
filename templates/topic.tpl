@@ -37,7 +37,7 @@
 						<div class="row">
 							<div class="col-md-12">
 								<div class="topic-profile-pic">
-									<a href="{relative_path}/user/{posts.userslug}">
+									<a href="{relative_path}/user/{posts.user.userslug}">
 										<img src="{posts.user.picture}" alt="{posts.user.username}" class="profile-image user-img" title="{posts.user.username}">
 										<!-- IF posts.user.banned -->
 										<span class="label label-danger">[[topic:banned]]</span>
